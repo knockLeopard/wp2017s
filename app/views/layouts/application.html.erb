@@ -16,41 +16,25 @@
     
     <div class="sidebar border">
         <ul class="mylist">
-            <li>
-                종합 신문
-                <ul class="mylist_inner">
-                    <li><a href="http://m.chosun.com/" target="frametest1">조선일보</a></li>
-                    <li><a href="http://m.khan.co.kr/" target="frametest1">경향신문</a></li>
-                    <li><a href="http://m.yna.co.kr/" target="frametest1">연합뉴스</a></li>
-                </ul>
-            </li>
-            <li>
-                경제 신문
-                <ul class="mylist_inner">
-                    <li><a href="http://m.mk.co.kr/" target="frametest2">매일경제</a></li>
-                    <li><a href="http:/plus.hankyung.com/" target="frametest2">한국경제</a></li>
-                    <li><a href="http://m.asiae.co.kr/" target="frametest2">아시아경제</a></li>
-                </ul>
-            </li>
-
-            <% Paper.all.each do |p| %>
-                    <% if p.company == "kh" %>
-                    <li>
-                        <%= link_to home_show_path(p.id) do %>
-                            <%= p.created_at.strftime("%Y %M %D") %>
-                        <% end %>
-                    </li>
+            <% ary = ["조선일보", "경향신문", "BBC", "The Korean Times", "Washington Post"] %>
+            <% ary.each do |a| %>
+            <li> <%= a %> 
+              <ul class="mylist_inner">
+                <% Paper.all.each do |p| %>
+                    <% if p.company == a %>
+                       <li>
+                         <%= link_to home_show_path(p.id) do %>
+                             <%= p.created_at.getlocal.strftime("%m월 %d일 %H시") %>
+                         <% end %>
+                     </li>
                     <% end %>
-
+                <% end %>
+              </ul>
+            </li>
             <% end %>
-        </ol>
+        </ul>
     </div>
     <%= yield %>
-
-
-
-
-
 
 
 <p id="notice"><%= notice %></p>

@@ -74,7 +74,7 @@ s.in '3s' do
 
 	paper = Paper.new
 	paper.url = paper_url
-	paper.company = "koreatimes"
+	paper.company = "The Korean Times"
 	paper.content = article
 	paper.save
 	#end of koreatimes
@@ -93,7 +93,7 @@ s.in '3s' do
 
 	paper = Paper.new
 	paper.url = paper_url
-	paper.company = "washingtonpost"
+	paper.company = "Washington Post"
 	paper.content = article
 	paper.save
 	#end of nytimes
