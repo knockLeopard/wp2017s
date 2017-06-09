@@ -13,3 +13,146 @@
  *= require_tree .
  *= require_self
  */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+@import url(http://fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+
+body {
+    padding:20px;
+    font-family: 'Nanum Gothic', serif;
+    background-color: khaki;
+  
+}
+p{
+	white-space: pre-line;
+}
+
+.header {
+    background-color: #115599;
+    background-image: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRHJ_HGchkBXCIxjF3xTynmsMwG4aEnMbgLha-B-OZlsEvZ70Eueg');
+    background-position: center;
+    background-size: 20%;
+    padding: 0px;
+    height: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+
+.wrapper {
+    background-color: oldlace;
+    margin-bottom:10px;
+	padding:10px;
+    max-width : 80%;
+
+}
+
+.wrapper2 {
+    background-color: #FF0000;
+    margin-bottom:10px;
+	padding:10px;
+    max-width : 80%;
+
+}
+
+.newsContents{
+    background-color: #FF9364;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-family: 'Nanum Pen Script', serif;
+    font-size: 30px;
+}
+
+.mobileNewsFrame{
+    margin-top:10px;
+    margin-bottom:20px;
+    padding: 10px;
+}
+
+table {
+	border:1px solid #FF9364;
+	margin:auto;
+	vertical-align:top;
+	border-collapse:collapse;
+}
+h1{
+    text-align:center; 
+    color:#FF0000; 
+    font-size:20px;
+}
+h2 {
+	color:black;
+
+}
+tr {
+	border:1px solid #ddd;
+}
+
+th, td {
+	padding:10px;
+}
+.table_row_odd {
+    color: white;
+	background-color:darkgreen;
+}
+
+.table_row_even {
+    color: black;
+	background-color:lightgreen;
+}
+    
+.sidebar {
+    background-color: sandybrown;
+    position: fixed;
+    right: 0px;
+    width: 15%;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-top:70px;
+    float: right;
+    border: 0px solid #bcbcbc;
+    font-family: 'Jeju Hallasan', serif;
+    }
+
+.border {
+     border-radius: 20px;     
+ }    
+
+.topbar{
+    position: fixed;
+    background-color: powderblue;
+    top: 0px;
+    height: 70px;
+    padding: 0px;
+}
+
+#topContents{
+    color:crimson; 
+    font-size: 16px; 
+    text-align: center;
+    font-family: 'Nanum Gothic', serif;
+}
+
+ul.mylist {
+    margin: 0px;
+    padding: 0px;
+    max-width: 200px;
+    width: 100%;
+}
+
+ul.mylist li {
+    list-style: none;
+    border-bottom: 0px ;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+ul.mylist_inner li {
+    list-style: none;
+    border-bottom: 1px solid #efefef;
+    font-size: 14px;
+    margin: 4px;
+}
+
+

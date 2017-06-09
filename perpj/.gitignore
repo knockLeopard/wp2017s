@@ -21,3 +21,6 @@
 /yarn-error.log
 
 .byebug_history
+
+# os X directory
+.AppleDouble/

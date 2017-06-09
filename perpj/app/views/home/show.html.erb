@@ -1,0 +1,8 @@
+<p><%= @paper.content.gsub("     ", "\n").gsub(" .. ", "\n") %></p>
+<%= @paper.comment %>
+
+
+<%= form_tag(home_show_path(@paper.id), method: :get) do %>
+    <%= text_area :comment, :new_comment %>
+    <%= submit_tag %>
+<% end %>
