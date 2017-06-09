@@ -1,0 +1,37 @@
+<%= form_with(model: paper, local: true) do |form| %>
+  <% if paper.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(paper.errors.count, "error") %> prohibited this paper from being saved:</h2>
+
+      <ul>
+      <% paper.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url, id: :paper_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company %>
+    <%= form.text_field :company, id: :paper_company %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_field :content, id: :paper_content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment %>
+    <%= form.text_area :comment, id: :paper_comment %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
