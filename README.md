@@ -7,6 +7,7 @@ This is a website that you can gather today's top news from
 3. BBC
 4. The Korea Times
 5. Washington Post
+
 Moreover, you can write down your comment or thinking on each single news.
 The top news will be crawled every 3 hours from the moment you turn on server.
 
@@ -67,14 +68,14 @@ If someone wants to collect more newspaper website, there are two steps
 	paper.save
 	#end of koreatimes
 ```
-#### 2. At `views/layouts/application.html.erb`
+#### 2. At `views/layouts/application.htiml.erb`
 1. Add the newspaper's company name to array `ary`
 ```ruby
  <% ary = ["조선일보", "경향신문", "BBC", "The Korean Times", "Washington Post"] %>
  ```
 
 ### How does this website looks like
-
+![portrait](portrait.png) ![landscape](landscape)
 
 
 ### What user can expect
