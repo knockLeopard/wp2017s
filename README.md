@@ -35,6 +35,7 @@ See [here](https://todaystopnews-knockleopard.c9users.io) for demonstration.
 
 ### Install and Usage
 - `bundle install`
+- `rake db:migrate`
 - `rails s` then it runs on localhost:3000
 
 ### What user can expect
