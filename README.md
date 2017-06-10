@@ -38,8 +38,7 @@ See [here](https://todaystopnews-knockleopard.c9users.io) for demonstration.
 - `rails s` then it runs on localhost:3000
 
 ### Database
-papers : table
-url:string, company:string, content:string, comment:text
+sqlite3 :: papers:table, url:string, company:string, content:string, comment:text
 
 ### Modification
 If someone wants to collect more newspaper website, there are two steps
