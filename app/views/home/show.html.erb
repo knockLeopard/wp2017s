@@ -1,8 +1,26 @@
-<p><%= @paper.content.gsub("     ", "\n").gsub(" .. ", "\n") %></p>
-<%= @paper.comment %>
+ <head>
+ <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
 
+<h3 align="right"><%= @paper.company %></h3>
+<h4 align="right">
+<%= @paper.created_at.getlocal.strftime("%Y년 %m월 %d일 %H시") %> 
+</h4>
+
+<h4>
 <%= form_tag(home_show_path(@paper.id), method: :get) do %>
+나의 생각: 
     <%= text_area :comment, :new_comment %>
     <%= submit_tag %>
 <% end %>
+<% if @paper.comment %>
+코멘트 : 
+<%= @paper.comment %>
+<% end %>
+
+</h4><br>
+<p><%= @paper.content.gsub("     ", "\n").gsub(" .. ", "\n") %></p>

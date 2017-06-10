@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>My favorite News</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>Today's Top News</title>
+   
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,30 +11,59 @@
   </head>
 
   <body>
-     <div class="topbar">
-    </div>
-    
-    <div class="sidebar border">
-        <ul class="mylist">
+ 
+
+  <aside>
+  <a>
+  <svg version="1.1" id="nav-btn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+    <path id="list-view-icon" d="M462,108.857H50V50h412V108.857z M462,167.714H50v58.857h412V167.714z M462,285.429H50v58.857h412
+   V285.429z M462,403.143H50V462h412V403.143z"/>
+  </svg>
+</a>
+  <h1>News List</h1>
+ 
+  <nav>
+   <ul>
             <% ary = ["조선일보", "경향신문", "BBC", "The Korean Times", "Washington Post"] %>
             <% ary.each do |a| %>
-            <li> <%= a %> 
-              <ul class="mylist_inner">
-                <% Paper.all.each do |p| %>
+            <li id="products"> <%= a %> 
+                <% count = 0 %>
+                <% Paper.all.reverse_each do |p| %>
                     <% if p.company == a %>
+                      <% count = count + 1 %>
                        <li>
                          <%= link_to home_show_path(p.id) do %>
                              <%= p.created_at.getlocal.strftime("%m월 %d일 %H시") %>
                          <% end %>
                      </li>
                     <% end %>
+                    <% if count == 3 then %>
+                    <% break %>
+                    <% end %>
                 <% end %>
-              </ul>
+              
             </li>
             <% end %>
         </ul>
-    </div>
+  </nav>
+  
+  <div class="vertical-line"></div>
+  
+</aside>
+
+<header>
+  <h2>Today's Top News</h2>
+</header>
+
+
+
+
+<article> 
+        
+    
     <%= yield %>
+
+</article>
 
 
 <p id="notice"><%= notice %></p>

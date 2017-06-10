@@ -13,3 +13,11 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery
+//= require jquery_ujs
+
+$(document).ready(function(){
+$( "#nav-btn" ).click(function() {
+  $( "nav" ).toggle( "slow" );
+});});
+

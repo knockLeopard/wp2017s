@@ -5,7 +5,7 @@ require 'open-uri'
 
 s = Rufus::Scheduler.singleton
 
-s.in '3s' do
+s.every '3h' do
 
 	# chosun
 	paper_url = "http://www.chosun.com/"
