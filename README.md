@@ -75,7 +75,7 @@ If someone wants to collect more newspaper website, there are two steps
  ```
 
 ### How does this website looks like
-![portrait](portrait.png) ![landscape](landscape)
+![portrait](readme_picture/portrait.png) ![landscape](readme_picture/landscape.png)
 
 
 ### What user can expect
